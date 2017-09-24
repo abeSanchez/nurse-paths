@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Map
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="map">
+
+    <ion-row *ngFor="let row of map; let i = index" [attr.data-index]="i">
+      <ion-col class="spot" *ngFor="let col of row; let j = index" [attr.data-index]="j">
+        <div *ngIf="map[i][j] != -1">
+          {{map[i][j]}}
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>

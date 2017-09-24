@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Patients
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let patient of patients" (click)="openPatient(patient)">
+      <ion-avatar item-start>
+        <img src="{{patient.picture}}">
+      </ion-avatar>
+      <h2>{{patient.name}}</h2>
+      <p>I'm the one who knocks!</p>
+      <ion-note *ngIf="patient.status == 1" item-end style="color: green">Well</ion-note>
+      <ion-note *ngIf="patient.status == 2" item-end style="color: orange">Moderate</ion-note>
+      <ion-note *ngIf="patient.status == 3" item-end style="color: red">Critical</ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

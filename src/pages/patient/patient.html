@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Patient</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <h1>{{patient.name}}</h1>
+  <p>{{patient.status}}</p>
+  <ion-list>
+    <ion-item>
+      Age
+      <ion-note item-end>57</ion-note>
+    </ion-item>
+    <ion-item>
+      Sex
+      <ion-note item-end>Male</ion-note>
+    </ion-item>
+    <ion-item>
+      Blood Type
+      <ion-note item-end>A+</ion-note>
+    </ion-item>
+    <ion-item>
+      Phone Number
+      <ion-note item-end>351-490-2084</ion-note>
+    </ion-item>
+    <ion-item>
+      Date of Birth
+      <ion-note item-end>7/4/1968</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
